@@ -30,7 +30,14 @@ code {
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
   --primary: hsl(213, 96%, 18%);
-  --lightblue: hsl(228, 100%, 84%);
+  --blue300: hsl(228, 100%, 84%);
+  --blue200: hsl(206, 94%, 87%);
+  --blue100: hsl(218, 100%, 97%);
+  --blue50: hsl(231, 100%, 99%);
+  --purple600: hsl(243, 100%, 62%);
+  --purple200: hsl(229, 24%, 87%);
+  --red500: hsl(354, 84%, 57%);
+  --grey500: hsl(231, 11%, 63%);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -97,6 +104,14 @@ code {
 }
 
 @theme inline {
+  --color-blue300: var(--blue300);
+  --color-blue200: var(--blue200);
+  --color-blue100: var(--blue100);
+  --color-blue50: var(--blue50);
+  --color-purple600: var(--prrple600);
+  --color-purple200: var(--purple200);
+  --color-red500: var(--red500);
+  --color-grey500: var(--grey500);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
