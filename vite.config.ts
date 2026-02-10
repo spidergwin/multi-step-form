@@ -6,7 +6,7 @@ import viteTsConfigPaths from 'vite-tsconfig-paths'
 import { fileURLToPath, URL } from 'url'
 
 import tailwindcss from '@tailwindcss/vite'
-import netlify from '@netlify/vite-plugin-tanstack-start'
+// import netlify from '@netlify/vite-plugin-tanstack-start'
 
 const config = defineConfig({
   resolve: {
@@ -16,7 +16,7 @@ const config = defineConfig({
   },
   plugins: [
     devtools(),
-    netlify(),
+    //netlify(),
     // this is the plugin that enables path aliases
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
