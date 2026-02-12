@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { BgSidebarDesktop, BgSidebarMobile } from '@/components/icons';
 import { ComponentExample } from '@/components/component-example'
 import { useForm } from "@tanstack/react-form";
 import { formFlow } from "@/lib/form-flow.tsx"
@@ -27,13 +28,15 @@ function RouteComponent() {
   })
 
   return (
-    <div className="flex gap-4 min-h-screen md:flex-col">
-      <div className="bg-blue-400 w-full h-full rounded-md">
+    <div className="flex gap-4 min-h-screen max-md:flex-col">
+      <div className=" w-full h-full rounded-md">
+        <BgSidebarDesktop />
+        <BgSidebarMobile />
         <div className="flex md:flex-col">
           {
             formData.map(({ id, stepLabel, label }) => (
               <div key={id} className="flex gap-2 items-center justify-center">
-                <div className={`border-2 rounded-full border-white flex place-content-center ${id === formState.id ? "bg-blue-400" : "bg-transparent"} `}>{id}</div>
+                <div className={`border-2 rounded-full p-4 size-8 border-white flex justify-center items-center ${id === formState.id ? "bg-blue-400" : "bg-transparent"} `}><span>{id}</span></div>
                 <div className="max-md:hidden">
                   <p>{stepLabel}</p>
                   <p>{label.toUpperCase()}</p>
