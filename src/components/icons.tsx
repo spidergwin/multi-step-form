@@ -19,7 +19,7 @@ export function BgSidebarDesktop({
       >
         <rect width="274" height="568" fill="#483EFF" rx="10" />
         <mask
-          id="a"
+          id="mask-desktop"
           width="274"
           height="568"
           x="0"
@@ -29,7 +29,7 @@ export function BgSidebarDesktop({
         >
           <rect width="274" height="568" fill="#fff" rx="10" />
         </mask>
-        <g mask="url(#a)">
+        <g mask="url(#mask-desktop)">
           <path
             fill="#6259FF"
             fillRule="evenodd"
@@ -65,7 +65,7 @@ export function BgSidebarMobile({
   height = 172,
 }: SideBarProps) {
   return (
-    <div className="lg:hidden bottom-0 top-0 -z-1 absolute">
+    <div className="lg:hidden top-0 left-0 right-0 -z-1 absolute">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -73,14 +73,14 @@ export function BgSidebarMobile({
         viewBox="0 0 375 172"
       >
         <defs>
-          <path id="a" d="M0 0h375v172H0z" />
+          <path id="path-mobile" d="M0 0h375v172H0z" />
         </defs>
         <g fill="none" fillRule="evenodd">
-          <mask id="b" fill="#fff">
-            <use xlinkHref="#a" />
+          <mask id="mask-mobile" fill="#fff">
+            <use xlinkHref="#path-mobile" />
           </mask>
-          <use xlinkHref="#a" fill="#483EFF" />
-          <g mask="url(#b)">
+          <use xlinkHref="#path-mobile" fill="#483EFF" />
+          <g mask="url(#mask-mobile)">
             <g transform="translate(-151.029 -133.957)">
               <path
                 fill="#6259FF"

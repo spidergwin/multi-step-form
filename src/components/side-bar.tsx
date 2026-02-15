@@ -4,7 +4,7 @@ const SideBar = () => {
   return (
     <>
       <BgSidebarDesktop className="w-sm" />
-      <BgSidebarMobile />
+      <BgSidebarMobile className="w-full" />
     </>
   )
 }
